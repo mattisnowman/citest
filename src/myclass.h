@@ -5,7 +5,9 @@ class MyClass {
 public:
     MyClass(double a, double b) : m_a(a), m_b(b) {}
 
-    double sum() const { return m_a + m_b; }
+    double sum() const;
+
+    double slowFunction() const;
 
 private:
     double m_a;
