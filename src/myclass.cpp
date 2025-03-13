@@ -12,6 +12,8 @@ MyClass::MyClass(double a, double b) :
 
 double MyClass::sum() const
 {
+    return m_a + m_b;
+    /*
     double result = 0;
     for (int i = 1; i < m_a; i++)
         result ++;
@@ -21,4 +23,5 @@ double MyClass::sum() const
     result += m_b - floor(m_b);
 
     return result;
+    */
 }
