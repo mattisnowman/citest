@@ -13,12 +13,12 @@ MyClass::MyClass(double a, double b) :
 double MyClass::sum() const
 {
     double result = 0;
-    for (int i = 0; i < m_a; i++)
-        result += i;
-    result += floor(m_a) - m_a;
-    for (int i = 0; i < m_b; i++)
-        result += i;
-    result += floor(m_b) - m_b;
+    for (int i = 1; i < m_a; i++)
+        result ++;
+    for (int i = 1; i < m_b; i++)
+        result ++;
+    result += m_a - floor(m_a);
+    result += m_b - floor(m_b);
 
-    return m_a + m_b;
+    return result;
 }
