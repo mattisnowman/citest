@@ -3,12 +3,22 @@
 
 #include <QtCore/QDebug>
 
-double MyClass::sum() const
+MyClass::MyClass(double a, double b) :
+    m_a(a),
+    m_b(b)
 {
-    return m_a + m_b;
+
 }
 
-double MyClass::slowFunction() const
+double MyClass::sum() const
 {
-    return m_a * m_b;
+    double result = 0;
+    for (int i = 0; i < m_a; i++)
+        result += i;
+    result += floor(m_a) - m_a;
+    for (int i = 0; i < m_b; i++)
+        result += i;
+    result += floor(m_b) - m_b;
+
+    return m_a + m_b;
 }

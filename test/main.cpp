@@ -9,12 +9,9 @@ private slots:
     void testAddition();
 };
 
-void MyTest::testAddition() {
-    double a = 2;
-    double b = 3;
-
-    MyClass c(2, 3);
-    QCOMPARE(a + b, c.sum());
+void MyTest::testAddition()
+{
+    QCOMPARE(2 + 3, MyClass(2, 3).sum());
 }
 
 // Run the test

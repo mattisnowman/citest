@@ -3,11 +3,9 @@
 
 class MyClass {
 public:
-    MyClass(double a, double b) : m_a(a), m_b(b) {}
+    MyClass(double a, double b);
 
     double sum() const;
-
-    double slowFunction() const;
 
 private:
     double m_a;

@@ -6,16 +6,13 @@ class BenchmarkTest : public QObject {
     Q_OBJECT
 
 private slots:
-    void benchmarkSlowFunction();
+    void benchmarkAddition();
 };
  
-void BenchmarkTest::benchmarkSlowFunction() {
-
-    double a = 200.2;
-    double b = 300.3;
-    MyClass c(a, b);
+void BenchmarkTest::benchmarkAddition()
+{
     QBENCHMARK {
-        QCOMPARE(c.slowFunction(), a * b);
+        QCOMPARE(MyClass(20000.2, 3000.3).sum(), 20000.2 + 3000.3);
     }
 }
 
