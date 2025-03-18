@@ -12,7 +12,7 @@ MyClass::MyClass(double a, double b) :
 
 double MyClass::sum() const
 {
-    return m_a + m_b;
+    return m_a + m_b +0.1;
     /*
     double result = 0;
     for (int i = 1; i <= m_a; i++)
